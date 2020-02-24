@@ -10,6 +10,6 @@ RUN apt-get install -y fontconfig
 RUN fc-cache -f -v
 
 # Add tzdata for setting the timezone to CET and delete it then
-RUN apt-get add tzdata
+RUN apt-get install tzdata
 RUN cp /usr/share/zoneinfo/CET /etc/localtime
 RUN echo "CET" > /etc/timezone
